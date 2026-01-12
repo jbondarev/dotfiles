@@ -11,14 +11,14 @@ config.font_size = 14.0
 
 -- appearance
 
-config.color_scheme = 'Nord (Gogh)'
+config.color_scheme = 'Gruvbox Dark (Gogh)'
 config.use_fancy_tab_bar = false
 
 config.initial_cols = 120
 config.initial_rows = 30
 
-config.kde_window_background_blur = true
-config.window_background_opacity = 0.6 
+config.kde_window_background_blur = false
+-- config.window_background_opacity = 0.8 
 
 config.window_padding = {
 	left = 8,
