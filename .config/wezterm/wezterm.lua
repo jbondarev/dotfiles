@@ -12,7 +12,13 @@ config.font_size = 14.0
 -- appearance
 
 config.color_scheme = 'Gruvbox Dark (Gogh)'
-config.use_fancy_tab_bar = false
+
+-- tabs
+
+config.use_fancy_tab_bar = true
+config.tab_bar_at_bottom = true
+
+-- window
 
 config.initial_cols = 120
 config.initial_rows = 30
@@ -21,10 +27,10 @@ config.kde_window_background_blur = false
 -- config.window_background_opacity = 0.8 
 
 config.window_padding = {
-	left = 8,
-	right = 8,
-	top = 8,
-	bottom = 8
+	left = 10,
+	right = 10,
+	top = 10,
+	bottom = 10
 }
 
 config.default_cursor_style = "BlinkingBlock"
