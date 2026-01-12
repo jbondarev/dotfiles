@@ -1,3 +1,4 @@
 vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
-vim.keymap.set("n", "<leader>x", function() print("hello") end)
+vim.keymap.set("n", "<C-a>", "gg<S-v>G")
