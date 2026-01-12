@@ -6,7 +6,7 @@ if wezterm.config_builder then
 end
 
 -- font
-config.font = wezterm.font('FiraCode Nerd Font Mono', { weight = 'Regular' })
+config.font = wezterm.font('BlexMono Nerd Font Mono', { weight = 'Regular' })
 config.font_size = 14.0
 
 -- appearance
