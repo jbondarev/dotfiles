@@ -68,7 +68,7 @@ config.window_padding = {
 	bottom = 10
 }
 
-config.default_cursor_style = "BlinkingBlock"
+config.default_cursor_style = "BlinkingBar"
 
 -- performance
 config.max_fps = 144
