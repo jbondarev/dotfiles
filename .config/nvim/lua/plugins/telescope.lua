@@ -10,7 +10,7 @@ return {
 		},
 		config = function(_, opts)
 			local telescope = require("telescope")
-			telescope.
+
 			opts.defaults = {
 				wrap_results = true,
 				layout_config = { prompt_position = "top" }
