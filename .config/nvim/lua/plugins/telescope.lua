@@ -48,14 +48,16 @@ return {
 						hidden=true,
 
 					})
-				end
+				end,
+				desc = "Find files"
 			},
 			{
 				"<leader>;g",
 				function()
 					local builtin = require("telescope.builtin")
 					builtin.live_grep()
-				end
+				end,
+				desc = "Live grep"
 			},
 			{
 				"<leader>sf",
@@ -73,7 +75,8 @@ return {
 						previewer = false,
 						layout_config = { height = 40 }
 					})
-				end
+				end,
+				desc = "Show file tree"
 			}
 		},
 	},
