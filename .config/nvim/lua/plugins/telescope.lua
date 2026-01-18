@@ -10,6 +10,7 @@ return {
 		},
 		config = function(_, opts)
 			local telescope = require("telescope")
+			local fb_actions = require("telescope").extensions.file_browser.actions
 
 			opts.defaults = {
 				wrap_results = true,
@@ -24,7 +25,12 @@ return {
 					hidden = true,
 					grouped = true, 
 					previewer = false,
-					layout_config = { height = 40 }
+					layout_config = { height = 40 },
+					mappings = {
+						["n"] = {
+							["N"] = fb_actions.create
+						}
+					}
 				} 
 			}
 			telescope.setup(opts)

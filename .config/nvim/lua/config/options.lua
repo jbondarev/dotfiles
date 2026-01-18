@@ -13,5 +13,4 @@ vim.opt.relativenumber = true
 -- clipboard
 vim.opt.clipboard = "unnamedplus"
 
--- folding
-
+vim.opt.scrolloff = 8
