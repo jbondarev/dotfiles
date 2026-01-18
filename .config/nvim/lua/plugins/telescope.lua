@@ -26,11 +26,6 @@ return {
 					grouped = true, 
 					previewer = false,
 					layout_config = { height = 40 },
-					mappings = {
-						["n"] = {
-							["N"] = fb_actions.create
-						}
-					}
 				} 
 			}
 			telescope.setup(opts)
