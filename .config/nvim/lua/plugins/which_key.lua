@@ -4,9 +4,9 @@ return {
 	opts = {
 		spec = {
 			{ "<leader>g", group = "Go to.", },
-			{ "x", group = "Code analytics.", },
-			{ ";", group = "Code search.", },
-			{ "s", group = "File search.", },
+			{ "<leader>x", group = "Code analytics.", },
+			{ "<leader>;", group = "Code search.", },
+			{ "<leader>s", group = "File search.", },
 		}
 	},
 	keys = {
