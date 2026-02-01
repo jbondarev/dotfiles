@@ -57,7 +57,6 @@ return {
           'make',
           'markdown',
           'markdown_inline',
-          'norg',
           'python',
           'query',
           'regex',
@@ -105,7 +104,13 @@ return {
       'snacks_dashboard',
       'snacks_notif',
       'snacks_win',
-    }
+			'blink-cmp-menu',
+			'notify',
+			'noice',
+			'TelescopePrompt',
+			'TelescopeResults',
+			'blink-cmp-documentation'
+		}
 
     -- Auto-install parsers and enable highlighting on FileType
     vim.api.nvim_create_autocmd('FileType', {
