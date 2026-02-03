@@ -1,7 +1,7 @@
 gtk-tabs-location = bottom
-tab-bar = hidden
-theme = Gruvbox Material Dark
 
-font-family = "BlexMono Nerd Font Mono"
+theme = Catppuccin Mocha
+background = 000000 
+font-family = "Mononoki Nerd Font Mono"
 font-size = 16.0
 

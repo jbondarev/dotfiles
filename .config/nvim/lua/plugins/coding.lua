@@ -1,8 +1,8 @@
-return { 
+return {
 	{
 		'nvim-mini/mini.pairs',
 		version = '*',
-		opts = {} 
+		opts = {}
 	},
 	{
 		"lukas-reineke/indent-blankline.nvim",
@@ -10,7 +10,11 @@ return {
 		---@module "ibl"
 		---@type ibl.config
 		opts = {
-			scope = {}
+			indent = {
+				char = "│",
+				tab_char = "│",
+			},
+			scope = { show_start = true, show_end = false }
 		},
 	},
 }
