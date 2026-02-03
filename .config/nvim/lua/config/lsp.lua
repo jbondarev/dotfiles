@@ -8,6 +8,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		if client and client.server_capabilities.inlayHintProvider then
 			vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
 		end
+
 		vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition,
 			vim.tbl_extend("force", opts, { desc = "Go to definition." }))
 		vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration,
