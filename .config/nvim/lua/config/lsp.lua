@@ -8,15 +8,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		if client and client.server_capabilities.inlayHintProvider then
 			vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
 		end
-
-		if client and client.server_capabilities.codeLensProvider then
-      vim.api.nvim_create_autocmd({ 'BufEnter', 'CursorHold', 'InsertLeave' }, {
-        buffer = bufnr,
-        callback = function()
-          vim.lsp.codelens.refresh({ bufnr = bufnr })
-        end,
-      })
-    end
 		
 		vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition,
 			vim.tbl_extend("force", opts, { desc = "Go to definition." }))
@@ -56,7 +47,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist,
 			vim.tbl_extend("force", opts, { desc = "Diagnostics to loclist" }))
 
-		vim.keymap.set('n', '<leader>cl', vim.lsp.codelens.run, { buffer = bufnr, desc = 'Run code lens' })
 	end,
 })
 
