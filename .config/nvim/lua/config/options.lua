@@ -16,3 +16,5 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.scrolloff = 8
 vim.opt.cmdheight = 0
 vim.opt.termguicolors = true
+
+vim.opt.updatetime = 250 
