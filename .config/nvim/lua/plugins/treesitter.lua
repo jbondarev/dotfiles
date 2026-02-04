@@ -14,12 +14,6 @@ return {
 	lazy = false,
 	branch = 'main',
 	build = ':TSUpdate',
-	opts = {
-		indent = {
-			enable = true,
-			disable = { 'c_sharp' },
-		},
-	},
 	config = function()
 		local ts = require('nvim-treesitter')
 
@@ -30,11 +24,18 @@ return {
 
 		local ns = vim.api.nvim_create_namespace('treesitter.async')
 
+		-- Languages with broken treesitter indent queries (use cindent instead)
+		local indent_disabled = { c_sharp = true }
+
 		-- Helper to start highlighting and indentation
 		local function start(buf, lang)
 			local ok = pcall(vim.treesitter.start, buf, lang)
 			if ok then
-				vim.bo[buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+				if indent_disabled[lang] then
+					vim.bo[buf].cindent = true
+				else
+					vim.bo[buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+				end
 			end
 			return ok
 		end
@@ -46,6 +47,7 @@ return {
 			callback = function()
 				ts.install({
 					'bash',
+					'c_sharp',
 					'comment',
 					'css',
 					'diff',
