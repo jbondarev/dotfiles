@@ -55,6 +55,14 @@ return {
 				desc = "Live grep"
 			},
 			{
+				"<leader>;b",
+				function()
+					local builtin = require("telescope.builtin")
+					builtin.buffers()
+				end,
+				desc = "Find files"
+			},
+			{
 				"<leader>sf",
 				function() 
 					local telescope = require("telescope")

@@ -62,8 +62,8 @@ return {
 				mocha = function(mocha)
 					return {
 						LspInlayHint = {
-							fg = "#ffffff",
-							bg = "#000000",
+							fg = "#bababa",
+							bg = "#2f2f2f",
 						}
 					}
 				end
