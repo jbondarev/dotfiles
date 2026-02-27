@@ -5,3 +5,4 @@ background = 000000
 font-family = "Mononoki Nerd Font Mono"
 font-size = 16.0
 
+macos-option-as-alt = true
