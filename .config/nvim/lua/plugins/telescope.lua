@@ -38,10 +38,11 @@ return {
 				"<leader>;f",
 				function()
 					local builtin = require("telescope.builtin")
+                    local launch_cwd = vim.fn.getcwd()
 					builtin.find_files({
+                        cwd = launch_cwd,
 						no_ignore=false,
 						hidden=true,
-
 					})
 				end,
 				desc = "Find files"
@@ -50,7 +51,12 @@ return {
 				"<leader>;g",
 				function()
 					local builtin = require("telescope.builtin")
-					builtin.live_grep()
+                    local launch_cwd = vim.fn.getcwd()
+					builtin.live_grep({
+                        cwd = launch_cwd,
+                        additional_args = function() return {"--hidden"} end,
+                    }
+                    )
 				end,
 				desc = "Live grep"
 			},

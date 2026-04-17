@@ -3,6 +3,6 @@ gtk-tabs-location = bottom
 theme = Catppuccin Mocha
 background = 000000 
 font-family = "Mononoki Nerd Font Mono"
-font-size = 16.0
+font-size = 24.0
 
 macos-option-as-alt = true
